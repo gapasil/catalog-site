@@ -90,6 +90,9 @@ select {
 }
 .carousel.carousel-slider{
   max-height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 p{
   font-family: MyFontReg;

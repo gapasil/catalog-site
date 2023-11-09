@@ -10,6 +10,7 @@ import home from "../../images/back home.png"
 import question from "../../images/info-button.png"
 import { animateScroll as scroll } from 'react-scroll';
 import { Link } from 'react-router-dom';
+import MyCarousel from '../../components/carusel/MyCarusel';
 
 
 export const FindPage = () => {
@@ -156,19 +157,7 @@ export const FindPage = () => {
                 <div className={style.containercarusell}>
                     <button className={style.invise__close} onClick={()=>removeView()}>
                     </button>
-                    <Carousel 
-                        className={style.caruselcontainer} 
-                        showThumbs={false} 
-                        showIndicators={false}
-                    >
-                        {viewTarget.images.map((value) => {
-                            return(
-                                <div className={style.caruselBlock}>
-                                    <img src={value.url}/>
-                                </div>
-                            )
-                        })}
-                    </Carousel>
+                    <MyCarousel slide={viewTarget}/>
                     <div style={{width: "100%", zIndex: "100", display: "flex", justifyContent: "center", paddingTop:"10px"}}>
                         <p style={{paddingRight:"10px", display: "flex", alignItems: "center"}}>{viewTarget._id}</p>
                         <button onClick={copyBuffer} className={style.buttonCopy}>
@@ -181,16 +170,18 @@ export const FindPage = () => {
             }
             <div className={style.block__header}>
                 <a href={process.env.REACT_APP_TELEGRAM} style={{
-                    height: "80%", 
+                    width: "100%", 
+                    maxWidth:"72px",
                     display: "flex",
                     justifyContent: "flex-start"
                 }}><img src={logo} alt='logo' className={style.logo}/></a>
-                <div className={style.block__input} style={{height: "80%"}}>
+                <div className={style.block__input}>
                     <Input setState={(value) => setInputValue(value)}/>
                     <a onClick={scrollToTop} className={style.scrollTop}><img src={home}/></a>
                 </div>
                 <div className={style.block__question} style={{
-                    height: "80%",
+                    width: "100%", 
+                    maxWidth:"72px",
                     display: "flex",
                     justifyContent: "flex-end"
                 }}>

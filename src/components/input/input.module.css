@@ -4,6 +4,7 @@
     background: white;
     display: flex;
     justify-content: flex-start;
+    min-width: 70px;
 }
 .container button {
     max-width: 70px;

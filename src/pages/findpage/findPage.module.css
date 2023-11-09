@@ -15,14 +15,14 @@
 }
 .block__input{
     border: 1px solid black;
-    width: 80%;
-    height: 80%;
     display: flex;
     justify-content: space-between;
-
+    align-items: center;
+    width: 100%;
+    max-height: 72px;
+    margin: 0px 15px 0px 15px;
 }
 .block__question{
-    height: 80%;
 }
 .container__images{
     padding: 0px 90px 0px 90px;
@@ -90,10 +90,11 @@
 }
 .scrollTop{ 
     cursor: pointer;
-    height: 100%;
+    min-width: 70px;
+    max-height: 72px;
 }
 .scrollTop img{
-    height: 100%;
+    max-height: 72px;
 }
 .block__header{
     z-index: 120;
