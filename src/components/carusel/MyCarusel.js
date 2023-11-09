@@ -40,6 +40,7 @@ const MyCarousel = ({slide}) => {
             className={style.caruselcontainer} 
             showThumbs={false} 
             showIndicators={false}
+            dynamicHeight={true}
         >
             {slide.images.map((value) => {
                 return(

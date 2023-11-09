@@ -181,6 +181,7 @@ export const FindPage = () => {
                 </div>
                 <div className={style.block__question} style={{
                     width: "100%", 
+                    maxHeight: "72px",
                     maxWidth:"72px",
                     display: "flex",
                     justifyContent: "flex-end"

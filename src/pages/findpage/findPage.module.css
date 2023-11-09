@@ -1,25 +1,57 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .container{
     width: 100%;
     min-height: 100vh;
     background: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .logo{
     height: 100%;
 }
 .block__question{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
 }
 .block__input{
     border: 1px solid black;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 100%;
     max-height: 72px;
+    height: 100%;
     margin: 0px 15px 0px 15px;
 }
 .block__question{
@@ -28,14 +60,25 @@
     padding: 0px 90px 0px 90px;
     width: 100%;
     padding-top: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     min-height: 100vh;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 .line__block__image{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding-top: 10px
 }
 .block__images{
@@ -44,8 +87,12 @@
     padding: 0px 10px 0px 0px;
     z-index: 100;
     cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 .block__images img{
     max-height: 200px;
@@ -61,8 +108,12 @@
     padding: 0px 0px 0px 0px;
 }
 .caruselcontainer{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     max-width: 700px;
     max-height: 700px;
 }
@@ -70,10 +121,19 @@
     width: 100vw;
     height: 100vh;
     z-index: 150;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     position: fixed;
 }
 .containercarusell p{
@@ -102,11 +162,23 @@
     height: 90px;
     padding: 0px 90px 0px 90px;
     background: white;
-    box-shadow: 20px 20px 30px 5px white;
+    -webkit-box-shadow: 20px 20px 30px 5px white;
+            box-shadow: 20px 20px 30px 5px white;
     position: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+@media (min-width: 1600px) {
+    .block__images img{
+        max-height: 500px;
+    }
 }
 @media (max-width: 990px) {
     .block__header{
@@ -115,19 +187,31 @@
         height: 90px;
         padding: 0px 5px 0px 5px;
         background: white;
-        box-shadow: 20px 20px 30px 5px white;
+        -webkit-box-shadow: 20px 20px 30px 5px white;
+                box-shadow: 20px 20px 30px 5px white;
         position: fixed;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
     .container__images{
         padding: 0px 5px 0px 5px;
         width: 100%;
         padding-top: 100px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         min-height: 100vh;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
 }
 .block__question__link img{
