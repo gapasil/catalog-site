@@ -141,14 +141,37 @@ export const FindPage = () => {
         setViewTarget(false)
     }
 
+    const unsecuredCopyToClipboard = (text) => {
+        // Создаем элемент textarea
+        const textArea = document.createElement("textarea"); 
+        textArea.value = text; 
+    
+        // Применяем стили, чтобы сделать его невидимым и без размера
+        textArea.style.position = 'fixed';
+        textArea.style.top = '50%';
+        textArea.style.left = '50%';
+        textArea.style.transform = 'translate(-50%, -50%)';
+    
+        // Добавляем textarea в body
+        document.body.appendChild(textArea); 
+    
+        // Устанавливаем фокус на textarea и выделяем текст
+        textArea.focus();
+        textArea.select(); 
+    
+        try {
+            // Пытаемся скопировать текст в буфер обмена
+            document.execCommand('copy');
+        } catch(err) {
+            console.error('Unable to copy to clipboard', err);
+        }
+    
+        // Удаляем textarea из body
+        document.body.removeChild(textArea);
+    };
+    
     function copyBuffer() {
-        navigator.clipboard.writeText(viewTarget._id)
-        .then(() => {
-            console.log('Text copied to clipboard');
-        })
-        .catch(err => {
-            console.error('Error in copying text: ', err);
-        });
+        unsecuredCopyToClipboard(viewTarget._id);
     }
 
     return (
