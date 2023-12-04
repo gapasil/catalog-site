@@ -140,7 +140,6 @@ export const FindPage = () => {
     const removeView = () => {
         setViewTarget(false)
     }
-<<<<<<< HEAD
 
     const unsecuredCopyToClipboard = (text) => {
         // Создаем элемент textarea
@@ -173,16 +172,6 @@ export const FindPage = () => {
     
     function copyBuffer() {
         unsecuredCopyToClipboard(viewTarget._id);
-=======
-    const unsecuredCopyToClipboard = (text) => { const textArea = document.createElement("textarea"); textArea.value=text; document.body.appendChild(textArea); textArea.focus();textArea.select(); try{document.execCommand('copy')}catch(err){console.error('Unable to copy to clipboard',err)}document.body.removeChild(textArea)};
-    
-    function copyBuffer() {
-        if (window.isSecureContext && navigator.clipboard) {
-            navigator.clipboard.writeText(viewTarget._id);
-         } else {
-            unsecuredCopyToClipboard(viewTarget._id);
-         };
->>>>>>> c625587acb016a0a3e866249482d715ad8506712
     }
 
     return (
