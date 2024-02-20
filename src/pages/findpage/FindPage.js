@@ -18,7 +18,7 @@ export const FindPage = () => {
     const [ preview, setPreview ] = useState([
         [],[],[],[],[],[],[],[],[],[]
     ])
-    const [ currentPage, setCurrPage ] = useState(1)
+    const [ currentPage, setCurrPage ] = useState(2)
     const [ fetching, setFetching ] = useState(true)
     const [ viewTarget, setViewTarget ] = useState()
     const [ inputValue, setInputValue ] = useState("")
@@ -37,7 +37,7 @@ export const FindPage = () => {
 
         if(fetching && inputValue)
         {
-            fetch(`${process.env.REACT_APP_SERVER}dddru?filter={'tags':'${inputValue.toLowerCase()}'}&pagesize=60&page=${currentPage}`, {
+            fetch(`${process.env.REACT_APP_SERVER}dddru?filter={'tags':'${inputValue.toLowerCase()}','telegram_id': {'$exists': true}}&pagesize=60&page=${currentPage}`, {
                 method:'GET',
                 headers: headers,
             })
@@ -73,7 +73,7 @@ export const FindPage = () => {
         if(inputValue)
         {
             setPreview([[],[],[],[],[],[],[],[],[],[]])
-            fetch(`${process.env.REACT_APP_SERVER}dddru?filter={'tags':'${inputValue.toLowerCase()}'}&pagesize=80`, {
+            fetch(`${process.env.REACT_APP_SERVER}dddru?filter={'tags':'${inputValue.toLowerCase()}','telegram_id': {'$exists': true}}&pagesize=60`, {
                 method:'GET',
                 headers: headers,
             })
@@ -82,7 +82,7 @@ export const FindPage = () => {
                 {
                     return 400
                 }
-                setCurrPage(1)
+                setCurrPage(2)
                 return res.json()
             })
             .then((value) => {
