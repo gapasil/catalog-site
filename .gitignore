@@ -23,3 +23,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Retain .env file
+!.env
+
+# Retain certs directory
+!certs/
