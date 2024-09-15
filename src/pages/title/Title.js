@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import {Header} from "../../components/header/Header"
 import styles  from "./title.module.css"
-import { images } from '../../images/imagesArray'
 
 export const Title = () => {
-    const [ arrImage, setArrImg ] = useState(images())
     const [ arrImgPrev, setArrImgPrev ] = useState()
 
     return (

@@ -3,7 +3,6 @@ import style from "./findPage.module.css"
 import Input from "../../components/input/Input"
 import logo from "../../images/LOGO tg 5.png"
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
 import {Buffer} from 'buffer';
 import copy from "../../images/copy.png"
 import home from "../../images/back home.png"
@@ -11,7 +10,6 @@ import question from "../../images/info-button.png"
 import { animateScroll as scroll } from 'react-scroll';
 import { Link } from 'react-router-dom';
 import MyCarousel from '../../components/carusel/MyCarusel';
-
 
 export const FindPage = () => {
     const [ arrImg, setArrImg ] = useState([])
